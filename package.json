@@ -1,0 +1,22 @@
+{
+  "name": "tensor-master",
+  "version": "1.0.0",
+  "description": "Rep for learning NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leshgun/Tensor.git"
+  },
+  "author": "Alexey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leshgun/Tensor/issues"
+  },
+  "homepage": "https://github.com/leshgun/Tensor#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
