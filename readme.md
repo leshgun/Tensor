@@ -1,6 +1,6 @@
 # Пишем первый класс
 
-class Student {\n
+class Student {
     constructor(params) {
        this.fullName = params.fullName;
        ….
