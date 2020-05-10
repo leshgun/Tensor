@@ -1,17 +1,27 @@
 # Пишем первый класс
 
 class Student {
+
     constructor(params) {
+
        this.fullName = params.fullName;
+
        ….
+
     }
+
     get birthDateStr: () => {
+
        ...
+
     }
+
     get age: () => {
+
        ...
+
     }
-}
+    
 
 
 
