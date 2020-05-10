@@ -1,6 +1,6 @@
 # Пишем первый класс
 
-class Student {  
+```class Student {  
     constructor(params) {  
        this.fullName = params.fullName;  
        ….  
@@ -11,8 +11,8 @@ class Student {
     get age: () => {  
        ...  
     }  
-}  
-  
+}
+```
 
 
 
@@ -20,7 +20,8 @@ class Student {
 
 # Делаем заполнение страницы с помощью нового класса
 
-Пусть на входе у нас будет фиксированный набор студентов:    
+Пусть на входе у нас будет фиксированный набор студентов:
+```   
 const studentArr = [    
    {  
        fullName: 'Маша Иванова',  
@@ -30,14 +31,16 @@ const studentArr = [
        photoUrl: '/photo1'  
    },  
    …..  
-];  
+];
+```
   
-Пробегаемся по массиву студентов и создаем экземпляры класса Student на базе элемента массива:  
+Пробегаемся по массиву студентов и создаем экземпляры класса Student на базе элемента массива:
+```
 studentArr.forEach((item) => {  
     const student = new Student(item);  
     appendStudentBlock(student);  
-});  
-  
+});
+```
 Функции appendStudentBlock у нас пока нет, пишем и ее.  
 Что она будет делать? Склеивает верстку, которую вы делали в прошлой домашней работе, с данными из экземпляра класса Student.  
 Конкретно вот этот кусочек.
@@ -63,6 +66,7 @@ studentArr.forEach((item) => {
 1.	Добавили элемент в DOM,
 2.	В результате функции вернули добавленный элемент.
 Дополним код подпиской на событие:
+```
 studentArr.forEach((item) => {
     const student = new Student(item);
     const studentBlock = appendStudentBlock(student);
@@ -70,6 +74,7 @@ studentArr.forEach((item) => {
         openCard(student, event.currentTarget);
     });
 });
+```
 Ну и наконец метод openCard просто создает миникарточку рядом с блоком студента.
 
 
