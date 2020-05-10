@@ -1,28 +1,18 @@
 # Пишем первый класс
 
-class Student {
-
-    constructor(params) {
-
-       this.fullName = params.fullName;
-
-       ….
-
-    }
-
-    get birthDateStr: () => {
-
-       ...
-
-    }
-
-    get age: () => {
-
-       ...
-
-    }
-    
-
+class Student {  
+    constructor(params) {  
+       this.fullName = params.fullName;  
+       ….  
+    }  
+    get birthDateStr: () => {  
+       ...  
+    }  
+    get age: () => {  
+       ...  
+    }  
+}  
+  
 
 
 
@@ -30,27 +20,27 @@ class Student {
 
 # Делаем заполнение страницы с помощью нового класса
 
-Пусть на входе у нас будет фиксированный набор студентов:
-const studentArr = [
-   {
-       fullName: 'Маша Иванова',
-       university: 'УГАТУ',
-       course: 2,
-       birthDate: new Date(2000, 0, 1),
-       photoUrl: '/photo1'
-   },
-   …..
-];
-
-Пробегаемся по массиву студентов и создаем экземпляры класса Student на базе элемента массива:
-studentArr.forEach((item) => {
-    const student = new Student(item);
-    appendStudentBlock(student);
-});
-
-Функции appendStudentBlock у нас пока нет, пишем и ее.
-Что она будет делать? Склеивает верстку, которую вы делали в прошлой домашней работе, с данными из экземпляра класса Student.
-Конкретно вот этот кусочек:
+Пусть на входе у нас будет фиксированный набор студентов:    
+const studentArr = [    
+   {  
+       fullName: 'Маша Иванова',  
+       university: 'УГАТУ',  
+       course: 2,  
+       birthDate: new Date(2000, 0, 1),  
+       photoUrl: '/photo1'  
+   },  
+   …..  
+];  
+  
+Пробегаемся по массиву студентов и создаем экземпляры класса Student на базе элемента массива:  
+studentArr.forEach((item) => {  
+    const student = new Student(item);  
+    appendStudentBlock(student);  
+});  
+  
+Функции appendStudentBlock у нас пока нет, пишем и ее.  
+Что она будет делать? Склеивает верстку, которую вы делали в прошлой домашней работе, с данными из экземпляра класса Student.  
+Конкретно вот этот кусочек.
  
   |pic_1|
 
