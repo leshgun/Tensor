@@ -285,8 +285,13 @@ function getCardStructure(person){
     }
 }
 
-function getMiniCardStructure(student) {
-
+function getMiniCardStructure(person) {
+    let activity = 'Преподаёт:'
+    let course = '';
+    if (person['type'] == 'student') {
+        activity = 'Учится:'
+        course = person['course'] + ' курс';
+    }
     return [
         {
             'tag_name': 'div',
@@ -309,7 +314,7 @@ function getMiniCardStructure(student) {
                         {
                             'tag_name': 'div',
                             'class': 'mini_card__name',
-                            'cont': student['fullName'],
+                            'cont': person['fullName'],
                         },
                         {
                             'tag_name': 'div',
@@ -323,8 +328,8 @@ function getMiniCardStructure(student) {
                                 {
                                     'tag_name': 'div',
                                     'class': 'mini_card__sub_title__value',
-                                    'cont': student['birthDateStr'] + ' ' +
-                                                student['age'],
+                                    'cont': person['birthDateStr'] + ' ' +
+                                                person['age'],
                                 },
                             ],
                         },
@@ -335,13 +340,13 @@ function getMiniCardStructure(student) {
                                 {
                                     'tag_name': 'div',
                                     'class': 'mini_card__sub_title__value grey',
-                                    'cont': 'Учится:'
+                                    'cont': activity,
                                 },
                                 {
                                     'tag_name': 'div',
                                     'class': 'mini_card__sub_title__value',
-                                    'cont': student['university'] + ' ' 
-                                            + student['course'] + ' курс',
+                                    'cont': person['university'] + ' ' 
+                                            + course,
                                 },
                             ],
                         },
@@ -353,7 +358,7 @@ function getMiniCardStructure(student) {
                     'inner_items': [
                         {
                             'tag_name': 'img',
-                            'src': 'img/' + student['photoUrl'],
+                            'src': 'img/' + person['photoUrl'],
                         },
                     ],
                 },
