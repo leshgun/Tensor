@@ -286,12 +286,6 @@ function getCardStructure(person){
 }
 
 function getMiniCardStructure(person) {
-    let activity = 'Преподаёт:'
-    let course = '';
-    if (person['type'] == 'student') {
-        activity = 'Учится:'
-        course = person['course'] + ' курс';
-    }
     return [
         {
             'tag_name': 'div',
@@ -340,13 +334,17 @@ function getMiniCardStructure(person) {
                                 {
                                     'tag_name': 'div',
                                     'class': 'mini_card__sub_title__value grey',
-                                    'cont': activity,
+                                    'cont': person['type'] == 'student'
+                                                ? 'Учится:'
+                                                : 'Преподаёт:',
                                 },
                                 {
                                     'tag_name': 'div',
                                     'class': 'mini_card__sub_title__value',
                                     'cont': person['university'] + ' ' 
-                                            + course,
+                                            + (person['type'] == 'student'
+                                                ? person['course'] + ' курс'
+                                                : ''),
                                 },
                             ],
                         },
