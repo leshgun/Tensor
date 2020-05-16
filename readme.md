@@ -30,7 +30,7 @@ school.js - прямой импорт класса.
 
 ## Реализация
 
-Загружаем модули из нашей библиотеки, и запускаем скрипт
+Загрузка модулей из нашей библиотеки *personLib.js*, и запуск скрипта:
 ```
 require (
     ['modules/personLib'],
@@ -40,7 +40,7 @@ require (
 );
 ```
 
-Сам скрипт
+Сам скрипт:
 ```
 function start(person_lib) {
     const factory = new person_lib['Factory'];
