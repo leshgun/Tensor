@@ -1,11 +1,4 @@
-define (
-    'modules/school',
-    () => {
-        return School;
-    }
-);
-
-class School {
+export class School {
     constructor() {
         this.schoolList = new SchoolList();
         this.schoolDiv = document.createElement('div');

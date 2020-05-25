@@ -1,15 +1,11 @@
-require (
-    ['modules/personLib'],
-    (person_lib) => {
-        start(person_lib);
-    }
-);
+import {personLib} from './modules/personLib.js';
+import {School} from './modules/school.js';
 
-function start(person_lib) {
-    // console.log(person_lib)
-    const factory = new person_lib['Factory'];
-    
-    let school = new person_lib['School'];
+init();
+
+function init() {
+    const factory = new personLib['Factory'];
+    let school = new School();
     getStudentList().forEach((student) => {
         const person = factory.create('student', student);
         school.enroll(person);
@@ -20,9 +16,6 @@ function start(person_lib) {
     });
     school.appendToDom(document.getElementsByTagName('main')[0]);
 }
-
-
-
 
 
 

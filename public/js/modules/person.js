@@ -1,15 +1,9 @@
-define (
-    'modules/person',
-    () => {
-        return Person;
-    }
-);
-
-class Person {
+export class Person {
     constructor(params) {
-        this.fullName = params.fullName;
-        this.birthDate = params.birthDate;
-        this.photoUrl = params.photoUrl;
+        this.fullName = params['fullName'];
+        this.birthDate = params['birthDate'];
+        this.photoUrl = params['photoUrl'];
+        this.university = params['university'];
         this.type = 'person';
     };
     get birthDateStr() {

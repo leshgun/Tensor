@@ -1,14 +1,11 @@
-define (
-	'modules/personLib',
-	['modules/person_factory', 'modules/school'], 
-	// 'modules/person', 'modules/student', 'modules/teacher'],
-	(Factory, School, Person, Student, Teacher) => {
-		return {
-			'Factory': Factory,
-			'School': School,
-			// 'Person': Person,
-			// 'Student': Student,
-			// 'Teacher': Teacher,
-		};
-	}
-);
+import {PersonFactory as Factory} from './personFactory.js';
+import {Person} from './person.js';
+import {Student} from './student.js';
+import {Teacher} from './teacher.js';
+
+export const personLib = {
+	'Factory': Factory,
+	'Person': Person,
+	'Student': Student,
+	'Teacher': Teacher,
+}
