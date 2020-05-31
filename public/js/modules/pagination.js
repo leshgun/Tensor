@@ -35,20 +35,7 @@ export class Pagination extends Component {
     }
 
 	onClick() {
-		alert('LOH');
-	}
-
-	prevPage() {
-		this.update({
-			class: 'person',
-			args: {
-				'name': 'LOH'
-			}
-		})
-	}
-
-	nextPage() {
-		
+		alert('Got it...');
 	}
 
 }
