@@ -34,9 +34,7 @@ async function init(){
         school.enroll(person);
     });
 
-    school.enroll(factory.create({
-        'title': 'Loh',
-    }));
+    school.enroll(factory.create({}));
     school.mount(parent);
 
     // pagi.mount(parent);
